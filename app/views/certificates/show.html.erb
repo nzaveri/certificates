@@ -1,0 +1,25 @@
+<div class="box">
+<p>
+  <b>Consignor:</b>
+  <%=h @certificate.consignor %>
+</p>
+
+<p>
+  <b>Consignee:</b>
+  <%=h @certificate.consignee %>
+</p>
+
+<p>
+  <b>Date of issue:</b>
+  <%=h @certificate.date_of_issue.strftime('%m/%d/%Y') %>
+</p>
+
+<p>
+  <b>State of origin:</b>
+  <%=h @certificate.state_of_origin %>
+</p>
+</div>
+
+
+<%= link_to 'Edit', edit_certificate_path(@certificate) %> |
+<%= link_to 'Back', certificates_path %>

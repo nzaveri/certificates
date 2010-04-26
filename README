@@ -1,0 +1,14 @@
+This application is a web based program for archiving certificate of veterinary inspections. Business case is to keep track of cattle movements between the States and being able to track a cattle shipment in case of an emergency outbreak. 
+
+. generated model and initial CRUD screens using scaffold
+. revised viewer templates to use form select and short date
+. generated migration scripts
+. incorporated the relationship “has-many” and “belongs to” within model and database schema
+. executed unit test to: use “ymal” based setup data; validate required data fields at model level; walk thru one-to-many relationship among the models; 
+. tracked and version control the dev iterations
+
+<todo/>
+. more dynamic GUI for animals data entry
+. search capability to find animal or consignor or consignee
+. image viewer for seeing the actual certificate with basic image tools like zoom, rotate, 
+and pan. 

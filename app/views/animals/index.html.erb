@@ -1,0 +1,32 @@
+<h1>Listing of Animals on Certificate of Veterinary Inspections</h1>
+
+<table class="table">
+  <tr>
+    <th>Certificate ID</th>
+    <th>National ID</th>
+    <th>Alternate Tag</th>
+  </tr>
+
+<% @animals.each do |animal| %>
+  <tr>
+    <td><%=h animal.certificate_id %></td>
+    <td><%=h animal.national_id %></td>
+    <td><%=h animal.alternate_tag %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Back to Certificates', certificates_path %>
+
+<!--
+<h2>Select a task:</h2>
+
+<ul type="square">
+<li>
+<%= link_to 'New certificate', :controller => "certificates", :action => "new" %>
+</li>
+<li>
+<%= link_to 'View All Certificates', :controller => "certificates", :action => "index" %>
+</li>
+</ul>
+-->

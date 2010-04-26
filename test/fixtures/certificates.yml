@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  consignor: J.B Transport Service
+  consignee: WI Cattle Company
+  date_of_issue: 2010-01-31 15:27:53
+  state_of_origin: Texas
+  animalcount: 3
+
+two:
+  consignor: MyString2
+  consignee: MyString2
+  date_of_issue: 2010-01-31 15:27:53
+  state_of_origin: MyString2
+  animalcount: 2

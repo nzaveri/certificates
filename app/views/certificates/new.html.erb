@@ -1,0 +1,30 @@
+<h1>New Certificate of Veterinary Inspection</h1>
+
+<% form_for(@certificate) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :consignor %><br />
+    <%= f.text_field :consignor %>
+  </p>
+  <p>
+    <%= f.label :consignee %><br />
+    <%= f.text_field :consignee %>
+  </p>
+  <p>
+    <%= f.label :date_of_issue %><br />
+    <%= f.date_select :date_of_issue %>
+  </p>
+  <p>
+    <%= f.label :state_of_origin %><br />
+    <%= f.select :state_of_origin,
+                 Certificate::US_STATE_TYPES,
+                 :prompt => "Select a state of origin"
+    %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', certificates_path %>

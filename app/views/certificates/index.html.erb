@@ -1,0 +1,37 @@
+<table class="table">
+  <tr>
+    <th>Consignor</th>
+    <th>Consignee</th>
+    <th>Date of issue</th>
+    <th>State of origin</th>
+    <th>Animal(s)</th>
+    <th colspan="5"></th>
+  </tr>
+
+<% @certificates.each do |certificate| %>
+  <tr>
+    <td><%=h certificate.consignor %></td>
+    <td><%=h certificate.consignee %></td>
+    <td><%=h certificate.date_of_issue.strftime('%m/%d/%Y') %></td>
+    <td><%=h certificate.state_of_origin %></td>
+    <td><%= certificate.animals.size %></td>
+    <td><%= link_to 'Show', certificate %>
+    	<%= link_to 'Edit', edit_certificate_path(certificate) %>
+    	<%= link_to 'Destroy', certificate, :confirm => 'Are you sure?', :method => :delete %>
+    	<%= link_to 'Add Animal', :controller => "animals", :action => "new", :id => certificate.id %>
+    	<%= link_to 'View Animal(s)', :controller => "animals", :action => "show_by_certificate_id", :id => certificate.id %></td>
+  </tr>
+<% end %>
+</table>
+
+<!--
+<h2>Select a task:</h2>
+<ul type="square">
+<li>
+<%= link_to 'New certificate', new_certificate_path %>
+</li>
+<li>
+<%= link_to 'View All Animals', :controller => "animals", :action => "index" %>
+</li>
+</ul>
+-->

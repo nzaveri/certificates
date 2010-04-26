@@ -1,0 +1,28 @@
+<h1>Editing a Certificate of Veterinary Inspection</h1>
+
+<% form_for(@certificate) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :consignor %><br />
+    <%= f.text_field :consignor %>
+  </p>
+  <p>
+    <%= f.label :consignee %><br />
+    <%= f.text_field :consignee %>
+  </p>
+  <p>
+    <%= f.label :date_of_issue %><br />
+    <%= f.date_select :date_of_issue %>
+  </p>
+  <p>
+    <%= f.label :state_of_origin %><br />
+    <%= f.text_field :state_of_origin %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @certificate %> |
+<%= link_to 'Back', certificates_path %>

@@ -1,0 +1,17 @@
+<p>
+  <b>Certificate:</b>
+  <%=h @animal.certificate_id %>
+</p>
+
+<p>
+  <b>National ID:</b>
+  <%=h @animal.national_id %>
+</p>
+
+<p>
+  <b>Alternate Tag:</b>
+  <%=h @animal.alternate_tag  %>
+</p>
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'Back', animals_path %>

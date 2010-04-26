@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  certificate_id: 1
+  national_id: 1234
+  alternate_tag: "Silver Spoon"
+
+two:
+  certificate_id: 1
+  national_id: 1000
+  alternate_tag: "Diary Queen"
